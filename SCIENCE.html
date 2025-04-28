@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" >
+    <title>Science MCQs Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url(form.jpg);
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.question {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+.head{
+   font-size: 20px;
+   font-weight: 800;
+   height:110px;
+   width:100%;
+   margin-bottom:100px;
+   padding: 0;
+   display:flex;
+   justify-content: space-evenly;
+   align-items: center;
+   background-color:#222f3d;
+   
+}
+.searcher{
+    height:35px;
+    width:455px;
+    border-left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 16px;
+    background-color: #f7f6fb;
+   
+}
+
+.icon{
+    height:32px;
+    width: 31px;
+    color: #222f3d;
+    background-color: #f7f6fb;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    border-right: 0;
+}
+.sicon{
+    display: flex;
+    align-items:center;
+
+
+}
+.logo{
+    height:80px;
+    background-image: url(P.png);
+    background-size: cover;
+    width:80px;
+}
+.head a {
+    text-decoration: none;
+    color:white;
+    padding:3px;
+    
+}
+.head a:hover{
+    border:1px solid white;
+    color:white;
+}
+
+.main{
+    height:400px;
+    margin-bottom: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer {
+    background-color: #222f3d;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #17a2b8;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    padding: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer a:hover {
+    color: #ffc107;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+
+
+
+    </style>
+
+<div class="head">
+    <div class="logo">
+
+    </div>
+
+    <div><a href="1.html">HOME</a></div>
+    <div><a href="IQ TEST.html">SUBJECTS</a></div>
+    <div><a href="LEARN.html">STUDY LINKS</a></div>
+    <div class="sicon">
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>    
+        </div>   
+        <input  type="search" class="searcher" placeholder="     Search a question ....">
+
+    </div>
+    <div><a href=loginform.html>LOG IN </a></div>
+</div>
+
+    <div class="container">
+        <h1>Science MCQs Test</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What is the chemical symbol for water?</p>
+                <label>
+                    <input type="radio" name="q1" value="A"> A) H<sub>2</sub>O
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="B"> B) O<sub>2</sub>
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="C"> C) CO<sub>2</sub>
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="D"> D) H<sub>2</sub>O<sub>2</sub>
+                </label>
+            </div>
+
+            <div class="question">
+                <p>2. What is the powerhouse of the cell?</p>
+                <label>
+                    <input type="radio" name="q2" value="A"> A) Nucleus
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="B"> B) Mitochondria
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="C"> C) Ribosome
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="D"> D) Endoplasmic Reticulum
+                </label>
+            </div>
+
+            <div class="question">
+                <p>3. Which planet is known as the Red Planet?</p>
+                <label>
+                    <input type="radio" name="q3" value="A"> A) Earth
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="B"> B) Mars
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="C"> C) Venus
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="D"> D) Jupiter
+                </label>
+            </div>
+
+            <div class="question">
+                <p>4. What is the chemical formula for glucose?</p>
+                <label>
+                    <input type="radio" name="q1" value="A"> A) C₆H₁₂O₆
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="B"> B) C₁₂H₂₂O₁₁
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="C"> C) C₆H₁₁O₆
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="D"> D) C₄H₈O₄
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>5. Which gas is essential for respiration in humans?</p>
+                <label>
+                    <input type="radio" name="q2" value="A"> A) Carbon Dioxide
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="B"> B) Nitrogen
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="C"> C) Oxygen
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="D"> D) Hydrogen
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>6. What is the main organ of the circulatory system?</p>
+                <label>
+                    <input type="radio" name="q3" value="A"> A) Brain
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="B"> B) Lungs
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="C"> C) Heart
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="D"> D) Liver
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>7. What is the process by which plants make their food?</p>
+                <label>
+                    <input type="radio" name="q4" value="A"> A) Digestion
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="B"> B) Photosynthesis
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="C"> C) Respiration
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="D"> D) Fermentation
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>8. Which of the following is a renewable source of energy?</p>
+                <label>
+                    <input type="radio" name="q5" value="A"> A) Coal
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="B"> B) Natural Gas
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="C"> C) Solar Power
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="D"> D) Nuclear Power
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>9. What is the most abundant gas in the Earth's atmosphere?</p>
+                <label>
+                    <input type="radio" name="q6" value="A"> A) Oxygen
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="B"> B) Carbon Dioxide
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="C"> C) Nitrogen
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="D"> D) Argon
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>10. Which part of the brain controls balance and coordination?</p>
+                <label>
+                    <input type="radio" name="q7" value="A"> A) Cerebrum
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="B"> B) Cerebellum
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="C"> C) Brainstem
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="D"> D) Hypothalamus
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>11. What is the speed of light in a vacuum?</p>
+                <label>
+                    <input type="radio" name="q8" value="A"> A) 300,000 km/s
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="B"> B) 150,000 km/s
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="C"> C) 600,000 km/s
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="D"> D) 1,000,000 km/s
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>12. What is the primary component of the cell membrane?</p>
+                <label>
+                    <input type="radio" name="q9" value="A"> A) Protein
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="B"> B) Carbohydrate
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="C"> C) Lipid
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="D"> D) Nucleic Acid
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>13. Which type of bond involves the sharing of electron pairs between atoms?</p>
+                <label>
+                    <input type="radio" name="q10" value="A"> A) Ionic Bond
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="B"> B) Covalent Bond
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="C"> C) Metallic Bond
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="D"> D) Hydrogen Bond
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>14. What is the unit of measurement for electric current?</p>
+                <label>
+                    <input type="radio" name="q11" value="A"> A) Volt
+                </label>
+                <label>
+                    <input type="radio" name="q11" value="B"> B) Ampere
+                </label>
+                <label>
+                    <input type="radio" name="q11" value="C"> C) Ohm
+                </label>
+                <label>
+                    <input type="radio" name="q11" value="D"> D) Watt
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>15. Which organ is responsible for detoxifying chemicals and metabolizing drugs?</p>
+                <label>
+                    <input type="radio" name="q12" value="A"> A) Kidneys
+                </label>
+                <label>
+                    <input type="radio" name="q12" value="B"> B) Liver
+                </label>
+                <label>
+                    <input type="radio" name="q12" value="C"> C) Stomach
+                </label>
+                <label>
+                    <input type="radio" name="q12" value="D"> D) Pancreas
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>16. Which of the following is a non-renewable resource?</p>
+                <label>
+                    <input type="radio" name="q13" value="A"> A) Wind Energy
+                </label>
+                <label>
+                    <input type="radio" name="q13" value="B"> B) Coal
+                </label>
+                <label>
+                    <input type="radio" name="q13" value="C"> C) Solar Energy
+                </label>
+                <label>
+                    <input type="radio" name="q13" value="D"> D) Hydropower
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>17. What is the process by which a liquid turns into a gas?</p>
+                <label>
+                    <input type="radio" name="q14" value="A"> A) Condensation
+                </label>
+                <label>
+                    <input type="radio" name="q14" value="B"> B) Evaporation
+                </label>
+                <label>
+                    <input type="radio" name="q14" value="C"> C) Sublimation
+                </label>
+                <label>
+                    <input type="radio" name="q14" value="D"> D) Freezing
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>18. What type of radiation is used in medical imaging?</p>
+                <label>
+                    <input type="radio" name="q15" value="A"> A) Alpha Radiation
+                </label>
+                <label>
+                    <input type="radio" name="q15" value="B"> B) Beta Radiation
+                </label>
+                <label>
+                    <input type="radio" name="q15" value="C"> C) Gamma Radiation
+                </label>
+                <label>
+                    <input type="radio" name="q15" value="D"> D) X-Rays
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>19. Which structure in the human body produces insulin?</p>
+                <label>
+                    <input type="radio" name="q16" value="A"> A) Adrenal Glands
+                </label>
+                <label>
+                    <input type="radio" name="q16" value="B"> B) Pancreas
+                </label>
+                <label>
+                    <input type="radio" name="q16" value="C"> C) Thyroid
+                </label>
+                <label>
+                    <input type="radio" name="q16" value="D"> D) Pituitary Gland
+                </label>
+            </div>
+            
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <footer class="footer">
+        <p>About Us</p>
+        <pre>Make learning fun! Engage with your audience effectively be it online, offline or hybrid events.</pre> <br>
+        <a href="#link1">Our Team</a>
+        <a href="#link2">Our Story</a>
+        <a href="#link3">Mission</a>
+        <a href="#link4">Vision</a>
+        <a href="#link5">Careers</a>
+        <a href="#link6">Blog</a>
+        <a href="#link7">Press</a>
+        <a href="#link8">Contact Us</a>
+        <a href="#link9">Privacy Policy</a>
+        <br><br>
+        <center><hr style="width:700px"></center><br>
+        © QuizHub Private Limited | 2024. All Rights Reserved
+
+    </footer>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const answers = {
+        q1: 'A', // Correct answer for question 1
+        q2: 'B', // Correct answer for question 2
+        q3: 'B',  // Correct answer for question 3 
+        q4: 'A', // C₆H₁₂O₆
+        q5: 'C', // Oxygen
+        q6: 'C', // Heart
+        q7: 'B', // Photosynthesis
+        q8: 'C', // Solar Power
+        q9: 'C', // Nitrogen
+        q10: 'B', // Cerebellum
+        q11: 'A',  // 300,000 km/s
+        q12: 'C', // Lipid
+        q13: 'B', // Covalent Bond
+        q14: 'B', // Ampere
+        q15: 'B', // Liver
+        q16: 'B', // Coal
+        q17: 'B', // Evaporation
+        q18: 'C', // Gamma Radiation
+        q19: 'B'  // Pancreas
+};
+   
+
+    let score = 0;
+    const totalQuestions = Object.keys(answers).length;
+
+    for (let q in answers) {
+        const userAnswer = document.querySelector(`input[name="${q}"]:checked`);
+        if (userAnswer && userAnswer.value === answers[q]) {
+            score++;
+        }
+    }
+
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `You scored ${score} out of ${totalQuestions}.`;
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" >
+    <title>Math Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+
+*{
+    box-sizing: border-box;
+}
+.head{
+   font-size: 20px;
+   font-weight: 800;
+   height:110px;
+   width:100%;
+   margin-bottom:100px;
+   padding: 0;
+   display:flex;
+   justify-content: space-evenly;
+   align-items: center;
+   background-color:#222f3d;
+   
+}
+.searcher{
+    height:35px;
+    width:455px;
+    border-left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 16px;
+    background-color: #f7f6fb;
+   
+}
+
+.icon{
+    height:32px;
+    width: 31px;
+    color: #222f3d;
+    background-color: #f7f6fb;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    border-right: 0;
+}
+.sicon{
+    display: flex;
+    align-items:center;
+
+
+}
+.logo{
+    height:80px;
+    background-image: url(P.png);
+    background-size: cover;
+    width:80px;
+}
+.head a {
+    text-decoration: none;
+    color:white;
+    padding:3px;
+    
+}
+.head a:hover{
+    border:1px solid white;
+    color:white;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url(form.jpg);
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.question {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+.footer {
+    background-color: #222f3d;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #17a2b8;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    padding: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer a:hover {
+    color: #ffc107;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+}
+    </style>
+
+<div class="head">
+    <div class="logo">
+
+    </div>
+
+    <div><a href="1.html">HOME</a></div>
+    <div><a href="IQ TEST.html">SUBJECTS</a></div>
+    <div><a href="LEARN.html">STUDY LINKS</a></div>
+    <div class="sicon">
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>    
+        </div>   
+        <input  type="search" class="searcher" placeholder="     Search a question ....">
+
+    </div>
+    <div><a href=loginform.html>LOG IN </a></div>
+</div>
+
+    <div class="container">
+        <h1>Math Quiz</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What is the value of π (pi) up to two decimal places?</p>
+                <label>
+                    <input type="radio" name="q1" value="A"> A) 3.14
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="B"> B) 3.15
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="C"> C) 3.16
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="D"> D) 3.13
+                </label>
+            </div>
+
+            <div class="question">
+                <p>2. What is the quadratic formula?</p>
+                <label>
+                    <input type="radio" name="q2" value="A"> A) x = -b ± √(b² - 4ac) / 2a
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="B"> B) x = b ± √(4ac - b²) / 2a
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="C"> C) x = -b ± √(4a - b²) / 2c
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="D"> A) x = a ± b / c
+                </label>
+            </div>
+
+            <div class="question">
+                <p>3. What is the derivative of x²?</p>
+                <label>
+                    <input type="radio" name="q3" value="A"> A) 2x
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="B"> B) x²
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="C"> C) 2
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="D"> D) x
+                </label>
+            </div>
+
+            <div class="question">
+                <p>4. What is the integral of 1/x?</p>
+                <label>
+                    <input type="radio" name="q4" value="A"> A) ln|x| + C
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="B"> B) x + C
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="C"> C) 1/x + C
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="D"> D) x² + C
+                </label>
+            </div>
+
+            <div class="question">
+                <p>5. What is the value of sin(90°)?</p>
+                <label>
+                    <input type="radio" name="q5" value="A"> A) 0
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="B"> B) 0.5
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="C"> C) 1
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="D"> D) √2/2
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>9. What is the value of the expression 3^4?</p>
+                <label>
+                    <input type="radio" name="q9" value="A"> A) 81
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="B"> B) 64
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="C"> C) 27
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="D"> D) 12
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>10. What is the area of a triangle with a base of 10 and height of 5?</p>
+                <label>
+                    <input type="radio" name="q10" value="A"> A) 25
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="B"> B) 30
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="C"> C) 50
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="D"> D) 15
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>11. What is the value of the limit lim (x→0) (sin x) / x?</p>
+                <label>
+                    <input type="radio" name="q11" value="A"> A) 0
+                </label>
+                <label>
+                    <input type="radio" name="q11" value="B"> B) 1
+                </label>
+                <label>
+                    <input type="radio" name="q11" value="C"> C) ∞
+                </label>
+                <label>
+                    <input type="radio" name="q11" value="D"> D) -1
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>12. What is the Pythagorean theorem?</p>
+                <label>
+                    <input type="radio" name="q12" value="A"> A) a² + b² = c
+                </label>
+                <label>
+                    <input type="radio" name="q12" value="B"> B) a² + b² = c²
+                </label>
+                <label>
+                    <input type="radio" name="q12" value="C"> C) a + b = c
+                </label>
+                <label>
+                    <input type="radio" name="q12" value="D"> D) a² + c² = b²
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>13. What is the solution to the equation x² - 4 = 0?</p>
+                <label>
+                    <input type="radio" name="q13" value="A"> A) 2
+                </label>
+                <label>
+                    <input type="radio" name="q13" value="B"> B) -2
+                </label>
+                <label>
+                    <input type="radio" name="q13" value="C"> C) 0
+                </label>
+                <label>
+                    <input type="radio" name="q13" value="D"> D) ±2
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>14. What is the sum of the first five prime numbers?</p>
+                <label>
+                    <input type="radio" name="q14" value="A"> A) 28
+                </label>
+                <label>
+                    <input type="radio" name="q14" value="B"> B) 22
+                </label>
+                <label>
+                    <input type="radio" name="q14" value="C"> C) 20
+                </label>
+                <label>
+                    <input type="radio" name="q14" value="D"> D) 18
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>15. What is the value of 10% of 150?</p>
+                <label>
+                    <input type="radio" name="q15" value="A"> A) 15
+                </label>
+                <label>
+                    <input type="radio" name="q15" value="B"> B) 10
+                </label>
+                <label>
+                    <input type="radio" name="q15" value="C"> C) 25
+                </label>
+                <label>
+                    <input type="radio" name="q15" value="D"> D) 20
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>16. If a rectangle has a length of 8 and a width of 3, what is its perimeter?</p>
+                <label>
+                    <input type="radio" name="q16" value="A"> A) 22
+                </label>
+                <label>
+                    <input type="radio" name="q16" value="B"> B) 24
+                </label>
+                <label>
+                    <input type="radio" name="q16" value="C"> C) 20
+                </label>
+                <label>
+                    <input type="radio" name="q16" value="D"> D) 26
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>17. What is the median of the following set of numbers: 3, 1, 4, 2, 5?</p>
+                <label>
+                    <input type="radio" name="q17" value="A"> A) 3
+                </label>
+                <label>
+                    <input type="radio" name="q17" value="B"> B) 2
+                </label>
+                <label>
+                    <input type="radio" name="q17" value="C"> C) 4
+                </label>
+                <label>
+                    <input type="radio" name="q17" value="D"> D) 2.5
+                </label>
+            </div>
+            
+            <div class="question">
+                <p>18. What is the standard deviation of the numbers: 2, 4, 4, 4, 5, 5, 7, 9?</p>
+                <label>
+                    <input type="radio" name="q18" value="A"> A) 2
+                </label>
+                <label>
+                    <input type="radio" name="q18" value>
+            </div>            
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+    <footer class="footer">
+        <p>About Us</p>
+        <pre>Make learning fun! Engage with your audience effectively be it online, offline or hybrid events.</pre> <br>
+        <a href="#link1">Our Team</a>
+        <a href="#link2">Our Story</a>
+        <a href="#link3">Mission</a>
+        <a href="#link4">Vision</a>
+        <a href="#link5">Careers</a>
+        <a href="#link6">Blog</a>
+        <a href="#link7">Press</a>
+        <a href="#link8">Contact Us</a>
+        <a href="#link9">Privacy Policy</a>
+        <br><br>
+        <center><hr style="width:700px"></center><br>
+        © QuizHub Private Limited | 2024. All Rights Reserved
+
+    </footer>
+
+    <script >
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const answers = {
+        q1: 'A', // 3.14
+        q2: 'A', // x = -b ± √(b² - 4ac) / 2a
+        q3: 'A', // 2x
+        q4: 'A', // ln|x| + C
+        q5: 'C', // 1
+        q6: 'B', // 3
+        q7: 'B', // 180°
+        q8: 'A', // 5040
+        q9: 'A', // 81
+        q10: 'A', // 25
+        q11: 'B', // 1
+        q12: 'B', // a² + b² = c²
+        q13: 'D', // ±2
+        q14: 'A', // 28
+        q15: 'A', // 15
+        q16: 'B', // 22
+        q17: 'A', // 3
+        q18: 'C'  // 2.5
+    };
+
+    let score = 0;
+    const totalQuestions = Object.keys(answers).length;
+
+    for (let q in answers) {
+        const userAnswer = document.querySelector(`input[name="${q}"]:checked`);
+        if (userAnswer && userAnswer.value === answers[q]) {
+            score++;
+        }
+    }
+
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `You scored ${score} out of ${totalQuestions}.`;
+});
+
+    </script>
+</body>
+</html>

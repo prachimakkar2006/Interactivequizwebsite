@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url(form.jpg);
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 700px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0.95;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .quiz-list {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .quiz-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+    <title>Quiz Creator</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Create Your Quiz</h2>
+        <form id="quizForm">
+            <div class="form-group">
+                <label for="question">Question:</label>
+                <textarea id="question" name="question" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="option1">Option 1:</label>
+                <input type="text" id="option1" name="option1" required>
+            </div>
+            <div class="form-group">
+                <label for="option2">Option 2:</label>
+                <input type="text" id="option2" name="option2" required>
+            </div>
+            <div class="form-group">
+                <label for="option3">Option 3:</label>
+                <input type="text" id="option3" name="option3" required>
+            </div>
+            <div class="form-group">
+                <label for="option4">Option 4:</label>
+                <input type="text" id="option4" name="option4" required>
+            </div>
+            <div class="form-group">
+                <label for="answer">Correct Answer:</label>
+                <input type="text" id="answer" name="answer" required>
+            </div>
+            <button type="submit" class="btn">Add Question</button>
+        </form>
+
+        <div class="quiz-list" id="quizList">
+            <h3>Your Quiz</h3>
+        </div>
+    </div>
+
+    <script>
+        const quizForm = document.getElementById('quizForm');
+        const quizList = document.getElementById('quizList');
+
+        quizForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const question = document.getElementById('question').value;
+            const option1 = document.getElementById('option1').value;
+            const option2 = document.getElementById('option2').value;
+            const option3 = document.getElementById('option3').value;
+            const option4 = document.getElementById('option4').value;
+            const answer = document.getElementById('answer').value;
+
+            const quizItem = document.createElement('div');
+            quizItem.classList.add('quiz-item');
+            quizItem.innerHTML = `
+                <strong>Question:</strong> ${question} <br>
+                <strong>Options:</strong> <br>
+                1. ${option1} <br>
+                2. ${option2} <br>
+                3. ${option3} <br>
+                4. ${option4} <br>
+                <strong>Correct Answer:</strong> ${answer}
+            `;
+
+            quizList.appendChild(quizItem);
+
+            // Clear the form
+            quizForm.reset();
+        });
+    </script>
+</body>
+</html>

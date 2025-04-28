@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" >
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url(form.jpg);
+        }
+
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.question {
+    margin: 15px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.head{
+   font-size: 20px;
+   font-weight: 800;
+   height:110px;
+   width:100%;
+   margin-bottom:50px;
+   padding: 0;
+   display:flex;
+   justify-content: space-evenly;
+   align-items: center;
+   background-color:#222f3d;
+   
+}
+.searcher{
+    height:35px;
+    width:455px;
+    border-left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 16px;
+    background-color: #f7f6fb;
+   
+}
+
+.icon{
+    height:32px;
+    width: 31px;
+    color: #222f3d;
+    background-color: #f7f6fb;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    border-right: 0;
+}
+.sicon{
+    display: flex;
+    align-items:center;
+
+
+}
+.logo{
+    height:80px;
+    background-image: url(P.png);
+    background-size: cover;
+    width:80px;
+}
+.head a {
+    text-decoration: none;
+    color:white;
+    padding:3px;
+    
+}
+.head a:hover{
+    border:1px solid white;
+    color:white;
+}
+.footer {
+    background-color: #222f3d;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #17a2b8;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    padding: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer a:hover {
+    color: #ffc107;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.585);
+    border: 0.2rem solid black;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    transition: 0.3s ease;
+    color: black;
+}
+
+.social-icons a:hover{
+    color: white;
+    transform: scale(1.3) translateY(-5px);
+    background-color: black;
+    box-shadow: 0  0 25px white;
+}
+
+@media (max-width: 600px) {
+    button {
+        font-size: 1.2em;
+    }
+}
+
+
+
+    </style>
+
+<div id = "head" class="head">
+    <div class="logo">
+
+    </div>
+
+    <div><a href="1.html">HOME</a></div>
+    <div><a href="TEST.html">SUBJECTS</a></div>
+    <div><a href="LEARN.html">STUDY LINKS</a></div>
+    <div class="sicon">
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>    
+        </div>   
+        <input  type="search" class="searcher" placeholder="     Search a question ....">
+
+    </div>
+    <div><a href=loginform.html>LOG IN </a></div>
+</div>
+    <div class="container">
+        <h1>Coding Languages MCQs</h1>
+        <form id="quiz-form">
+            <!-- Questions will be inserted here by JavaScript -->
+        </form>
+        <button id="submit">Submit</button>
+        <div id="result" class="hidden"></div>
+    </div>
+    <footer class="footer">
+        <p>About Us</p>
+        <pre>Make learning fun! Engage with your audience effectively be it online, offline or hybrid events.</pre>
+        <a href="#link1">Our Team</a>
+        <a href="#link2">Our Story</a>
+        <a href="#link3">Mission</a>
+        <a href="#link4">Vision</a>
+        <a href="#link5">Careers</a>
+        <a href="#link6">Blog</a>
+        <a href="#link7">Press</a>
+        <a href="#link8">Contact Us</a>
+        <a href="#link9">Privacy Policy</a>
+        <br><div class="social-icons">
+            <a href="https://www.linkedin.com/" target="main"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+            <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        </div><br>
+        <center><hr style="width:700px"></center>
+        © QuizHub Private Limited | 2024. All Rights Reserved
+
+    </footer>
+
+
+    <script>
+        const questions = [
+    {
+        question: "What does HTML stand for?",
+        options: [
+            "Hyper Text Markup Language",
+            "High Text Markup Language",
+            "Hyperlink Text Markup Language",
+            "None of the above"
+        ],
+        answer: 0
+    },
+    {
+        question: "Which tag is used for creating a hyperlink in HTML?",
+        options: [
+            "<link>",
+            "<a>",
+            "<href>",
+            "<url>"
+        ],
+        answer: 1
+    },
+    {
+        question: "Which of the following is a CSS framework?",
+        options: [
+            "Bootstrap",
+            "React",
+            "Django",
+            "Node.js"
+        ],
+        answer: 0
+    },
+    {
+        question: "What does CSS stand for?",
+        options: [
+            "Cascading Style Sheets",
+            "Creative Style System",
+            "Colorful Style Sheets",
+            "None of the above"
+        ],
+        answer: 0
+    },
+    {
+        question: "Which property is used to change the background color in CSS?",
+        options: [
+            "bgcolor",
+            "background-color",
+            "color",
+            "background"
+        ],
+        answer: 1
+    },
+    {
+        question: "Which JavaScript method is used to write into an HTML element?",
+        options: [
+            "document.write()",
+            "console.log()",
+            "document.writeln()",
+            "document.writeHTML()"
+        ],
+        answer: 0
+    },
+    {
+        question: "What is the correct way to create a function in JavaScript?",
+        options: [
+            "function = myFunction()",
+            "function:myFunction()",
+            "function myFunction()",
+            "myFunction() = function"
+        ],
+        answer: 2
+    },
+    {
+        question: "Which of the following is used to define a block of code in JavaScript?",
+        options: [
+            "[]",
+            "{}",
+            "()",
+            "<>"
+        ],
+        answer: 1
+    },
+    {
+        question: "What does Python use to define a block of code?",
+        options: [
+            "Curly braces",
+            "Indentation",
+            "Square brackets",
+            "Parentheses"
+        ],
+        answer: 1
+    },
+    {
+        question: "Which of the following is a valid Python variable name?",
+        options: [
+            "my-variable",
+            "my_variable",
+            "my variable",
+            "my.variable"
+        ],
+        answer: 1
+    },
+    {
+        question: "What is the output of print(2 ** 3)?",
+        options: [
+            "6",
+            "8",
+            "9",
+            "None of the above"
+        ],
+        answer: 1
+    },
+    {
+        question: "Which function is used to read input from the user in Python?",
+        options: [
+            "input()",
+            "read()",
+            "get()",
+            "scan()"
+        ],
+        answer: 0
+    },
+    {
+        question: "What is the correct file extension for Python files?",
+        options: [
+            ".pyt",
+            ".pyth",
+            ".python",
+            ".py"
+        ],
+        answer: 3
+    },
+    {
+        question: "Which of the following is not a valid Python data type?",
+        options: [
+            "List",
+            "Dictionary",
+            "Tuple",
+            "Character"
+        ],
+        answer: 3
+    },
+    {
+        question: "Which of the following is a JavaScript library for building user interfaces?",
+        options: [
+            "React",
+            "Vue",
+            "Angular",
+            "All of the above"
+        ],
+        answer: 3
+    }
+];
+
+const form = document.getElementById('quiz-form');
+const resultDiv = document.getElementById('result');
+
+questions.forEach((q, index) => {
+    const questionElement = document.createElement('div');
+    questionElement.className = 'question';
+    questionElement.innerHTML = `
+        <p>${index + 1}. ${q.question}</p>
+        ${q.options.map((option, i) => `
+            <label>
+                <input type="radio" name="q${index}" value="${i}">
+                ${option}
+            </label>
+        `).join('')}
+    `;
+    form.appendChild(questionElement);
+});
+
+document.getElementById('submit').addEventListener('click', () => {
+    let score = 0;
+    questions.forEach((q, index) => {
+        const selected = form[`q${index}`].value;
+        if (selected && selected == q.answer) {
+            score++;
+        }
+    });
+    resultDiv.classList.remove('hidden');
+    resultDiv.innerHTML = `You scored ${score} out of ${questions.length}`;
+});
+
+    </script>
+
+    
+</body>
+</html>

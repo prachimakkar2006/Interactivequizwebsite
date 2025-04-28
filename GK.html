@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" >
+    <title>GK MCQ Quiz</title>
+</head>
+<body>
+
+    <style>
+        
+        *{
+            box-sizing: border-box;
+        }
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0px;
+    background-image: url(form.jpg);
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 15px;
+}
+
+.option {
+    display: block;
+    margin: 5px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.head{
+   font-size: 20px;
+   font-weight: 800;
+   height:110px;
+   width:100%;
+   margin-bottom:100px;
+   padding: 0;
+   display:flex;
+   justify-content: space-evenly;
+   align-items: center;
+   background-color:#222f3d;
+   
+}
+.searcher{
+    height:35px;
+    width:455px;
+    border-left: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 16px;
+    background-color: #f7f6fb;
+   
+}
+
+.icon{
+    height:32px;
+    width: 31px;
+    color: #222f3d;
+    background-color: #f7f6fb;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    border-right: 0;
+}
+.sicon{
+    display: flex;
+    align-items:center;
+
+
+}
+.logo{
+    height:80px;
+    background-image: url(P.png);
+    background-size: cover;
+    width:80px;
+}
+.head a {
+    text-decoration: none;
+    color:white;
+    padding:3px;
+    
+}
+.head a:hover{
+    border:1px solid white;
+    color:white;
+}
+
+.main{
+    height:400px;
+    margin-bottom: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer {
+    background-color: #222f3d;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.footer a {
+    color: #17a2b8;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+    padding: 5px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer a:hover {
+    color: #ffc107;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+}
+
+</style>
+
+<div class="head">
+    <div class="logo">
+
+    </div>
+
+    <div><a href="1.html">HOME</a></div>
+    <div><a href="TEST.html">SUBJECTS</a></div>
+    <div><a href="LEARN.html">STUDY LINKS</a></div>
+    <div class="sicon">
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>    
+        </div>   
+        <input  type="search" class="searcher" placeholder="     Search a question ....">
+
+    </div>
+    <div><a href=loginform.html>LOG IN </a></div>
+</div>
+
+
+<div class="container">
+    <h1>General Knowledge Test</h1>
+    <div id="quiz"></div>
+    <button id="submit">Submit Answers</button>
+    <div id="result"></div>
+</div>
+
+<footer class="footer">
+    <p>About Us</p>
+    <pre>Make learning fun! Engage with your audience effectively be it online, offline or hybrid events.</pre> <br>
+    <a href="#link1">Our Team</a>
+    <a href="#link2">Our Story</a>
+    <a href="#link3">Mission</a>
+    <a href="#link4">Vision</a>
+    <a href="#link5">Careers</a>
+    <a href="#link6">Blog</a>
+    <a href="#link7">Press</a>
+    <a href="#link8">Contact Us</a>
+    <a href="#link9">Privacy Policy</a>
+    <br><br>
+    <center><hr style="width:700px"></center><br>
+    © QuizHub Private Limited | 2024. All Rights Reserved
+
+</footer>
+
+<script>
+    const quizData = [
+{
+    question: "What is the capital of France?",
+    a: "Berlin",
+    b: "Madrid",
+    c: "Paris",
+    d: "Lisbon",
+    correct: "c",
+},
+{
+    question: "Who wrote 'To Kill a Mockingbird'?",
+    a: "Harper Lee",
+    b: "Jane Austen",
+    c: "Mark Twain",
+    d: "J.K. Rowling",
+    correct: "a",
+},
+{
+    question: "What is the largest planet in our solar system?",
+    a: "Earth",
+    b: "Jupiter",
+    c: "Mars",
+    d: "Saturn",
+    correct: "b",
+},
+{
+    question: "In which year did the Titanic sink?",
+    a: "1905",
+    b: "1912",
+    c: "1918",
+    d: "1923",
+    correct: "b",
+},
+
+    {
+        question: "What is the smallest country in the world?",
+        a: "Monaco",
+        b: "Malta",
+        c: "Vatican City",
+        d: "San Marino",
+        correct: "c",
+    },
+    {
+        question: "Which element has the chemical symbol 'O'?",
+        a: "Gold",
+        b: "Oxygen",
+        c: "Silver",
+        d: "Hydrogen",
+        correct: "b",
+    },
+    {
+        question: "Who painted the Mona Lisa?",
+        a: "Vincent Van Gogh",
+        b: "Pablo Picasso",
+        c: "Leonardo da Vinci",
+        d: "Claude Monet",
+        correct: "c",
+    },
+    {
+        question: "What is the longest river in the world?",
+        a: "Amazon River",
+        b: "Nile River",
+        c: "Yangtze River",
+        d: "Mississippi River",
+        correct: "b",
+    },
+    {
+        question: "What is the main ingredient in guacamole?",
+        a: "Tomato",
+        b: "Avocado",
+        c: "Pepper",
+        d: "Onion",
+        correct: "b",
+    },
+    {
+        question: "Who is known as the father of modern physics?",
+        a: "Isaac Newton",
+        b: "Albert Einstein",
+        c: "Galileo Galilei",
+        d: "Stephen Hawking",
+        correct: "b",
+    },
+    {
+        question: "Which planet is known as the Red Planet?",
+        a: "Earth",
+        b: "Venus",
+        c: "Mars",
+        d: "Jupiter",
+        correct: "c",
+    },
+    {
+        question: "Which organ in the human body is responsible for pumping blood?",
+        a: "Liver",
+        b: "Lungs",
+        c: "Heart",
+        d: "Kidneys",
+        correct: "c",
+    },
+    {
+        question: "In which continent is the Sahara Desert located?",
+        a: "Asia",
+        b: "Africa",
+        c: "North America",
+        d: "Australia",
+        correct: "b",
+    },
+    {
+        question: "Which gas do plants absorb from the atmosphere?",
+        a: "Oxygen",
+        b: "Carbon Dioxide",
+        c: "Nitrogen",
+        d: "Helium",
+        correct: "b",
+    },
+];
+
+
+
+const quizContainer = document.getElementById('quiz');
+const submitButton = document.getElementById('submit');
+const resultContainer = document.getElementById('result');
+
+function loadQuiz() {
+    quizData.forEach((data, index) => {
+        const questionElement = document.createElement('div');
+        questionElement.classList.add('question');
+
+        questionElement.innerHTML = `
+            <p>${index + 1}. ${data.question}</p>
+            <label class="option"><input type="radio" name="question${index}" value="a"> ${data.a}</label>
+            <label class="option"><input type="radio" name="question${index}" value="b"> ${data.b}</label>
+            <label class="option"><input type="radio" name="question${index}" value="c"> ${data.c}</label>
+            <label class="option"><input type="radio" name="question${index}" value="d"> ${data.d}</label>
+        `;
+
+        quizContainer.appendChild(questionElement);
+    });
+}
+
+function getSelectedAnswers() {
+    const answers = [];
+    quizData.forEach((_, index) => {
+        const answer = document.querySelector(`input[name="question${index}"]:checked`);
+        answers.push(answer ? answer.value : null);
+    });
+    return answers;
+}
+
+function showResult() {
+    const answers = getSelectedAnswers();
+    let score = 0;
+
+    answers.forEach((answer, index) => {
+        if (answer === quizData[index].correct) {
+            score++;
+        }
+    });
+
+    resultContainer.innerHTML = `<h2>You scored ${score} out of ${quizData.length}</h2>`;
+}
+
+submitButton.addEventListener('click', showResult);
+
+loadQuiz();
+
+    </script>
+</body>
+</html>
